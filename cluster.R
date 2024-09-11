@@ -1,6 +1,6 @@
 library("Ckmeans.1d.dp")
 library("rjson")
-holecard_pmfs <- fromJSON(file = "C:/Users/tieyo/projects/holdem_rank_clustering/outs.json")
+holecard_pmfs <- fromJSON(file = "./outs.json")
 weights = vector("integer", 4823)
 for(key in names(holecard_pmfs)) {
 	weights <- weights + unlist(holecard_pmfs[key])
