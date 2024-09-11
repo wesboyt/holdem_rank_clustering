@@ -10,7 +10,7 @@ max_clusters = 500
 result_distances = vector("integer", max_clusters)
 
 for(i in seq(2, max_clusters)) {
-	result_distances[i-1] <- Ckmeans.1d.dp(t, k=40, weights)$betweenss
+	result_distances[i-1] <- Ckmeans.1d.dp(t, k=i, weights)$betweenss
 }	
 
 relative_distances = vector("numeric", max_clusters - 3)
